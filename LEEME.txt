@@ -1,0 +1,13 @@
+MUNDO 3D PARA MARTU ❤️
+
+Esta versión usa Three.js para un escenario 3D de partículas rosas, caminos luminosos en espiral, corazón central, frases flotantes y fotos en marcos 3D. Está diseñada para móvil: arrastrá para girar y pellizcá para acercar/alejar.
+
+PUBLICAR CON GITHUB PAGES
+1. Creá un repositorio público en https://github.com/new (por ejemplo: para-martu).
+2. Descomprimí el ZIP.
+3. Subí index.html y la carpeta assets a la raíz del repositorio.
+4. Entrá en Settings > Pages.
+5. En Build and deployment elegí Deploy from a branch; rama main; carpeta /(root); Save.
+6. Esperá que GitHub genere la URL, normalmente https://TUUSUARIO.github.io/para-martu/
+
+Requiere conexión a Internet para cargar Three.js desde jsDelivr.

@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080014">
+<title>Para Martu ❤️</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#ff64c8;--purple:#9b5cff;--white:#fff4ff}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,serif;color:var(--white);
+  background:#05000e;overflow-x:hidden;text-align:center;
+}
+#universe{
+  position:fixed;inset:0;z-index:-3;
+  background:radial-gradient(ellipse at 50% 45%,#28105a 0%,#100525 38%,#030009 80%);
+  overflow:hidden;
+}
+#stars{position:absolute;inset:0;width:100%;height:100%}
+.nebula{
+  position:absolute;width:75vw;height:75vw;max-width:700px;max-height:700px;
+  border-radius:50%;filter:blur(70px);opacity:.18;pointer-events:none;
+  background:radial-gradient(circle,#b33cff,transparent 68%);
+  animation:nebula 14s ease-in-out infinite alternate;
+}
+.nebula.one{top:-25%;left:-25%}
+.nebula.two{bottom:-35%;right:-20%;background:radial-gradient(circle,#ff329c,transparent 68%);animation-delay:-6s}
+@keyframes nebula{to{transform:translate(12vw,10vh) scale(1.25)}}
+section{padding:75px 20px;position:relative}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 16px}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;color:#d9b6ff;margin-bottom:20px}
+h1{font-size:clamp(42px,10vw,88px);line-height:1.05;text-shadow:0 0 20px #c43dff,0 0 60px #8b26ff}
+.gradient{background:linear-gradient(90deg,#fff,#ff8fdf,#c9a2ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.subtitle{font-size:clamp(17px,4vw,23px);margin-top:22px;color:#eadcff;line-height:1.6;max-width:550px}
+.scroll{margin-top:42px;color:#d6b9ff;font:12px Arial,sans-serif;letter-spacing:3px;animation:float 2s infinite}
+@keyframes float{50%{transform:translateY(8px)}}
+
+/* CORAZÓN 3D */
+.heart-wrap{height:240px;width:100%;display:grid;place-items:center;perspective:700px;margin:12px 0}
+.heart{
+  position:relative;width:95px;height:95px;background:#ff278e;
+  transform:rotate(-45deg);animation:heartbeat 1.5s ease-in-out infinite;
+  filter:drop-shadow(0 0 15px #ff248c) drop-shadow(0 0 45px #c900ff);
+}
+.heart:before,.heart:after{content:"";position:absolute;width:95px;height:95px;background:#ff278e;border-radius:50%}
+.heart:before{top:-47px;left:0}
+.heart:after{left:47px;top:0}
+.heart-inner{position:absolute;inset:0;z-index:2;transform:rotate(45deg);display:grid;place-items:center;font-size:33px}
+@keyframes heartbeat{0%,100%{transform:rotate(-45deg) scale(1)}50%{transform:rotate(-45deg) scale(1.13)}}
+
+h2{font-size:clamp(30px,7vw,48px);margin-bottom:20px}
+p{line-height:1.85}
+.panel{
+  width:min(680px,100%);margin:auto;padding:clamp(22px,6vw,42px);
+  border:1px solid #c18aff42;border-radius:25px;
+  background:linear-gradient(135deg,#ffffff0d,#9b50ff0b);
+  box-shadow:0 0 45px #8d25ff12;backdrop-filter:blur(8px);
+}
+.love-text{font-size:clamp(17px,4vw,21px);color:#f7eaff}
+.love-text strong{color:#ff9cde}
+.divider{color:#ff86d7;font-size:25px;margin:25px 0}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:800px;margin:auto}
+.quote{
+  min-height:140px;padding:24px 16px;display:flex;align-items:center;justify-content:center;
+  border-radius:18px;border:1px solid #b881ff35;
+  background:#ffffff08;color:#f4ddff;font-size:18px;line-height:1.6;
+  transition:transform .3s,border-color .3s;
+}
+.quote:hover{transform:translateY(-5px);border-color:#ff80d2}
+@media(max-width:500px){.quotes{grid-template-columns:1fr}.quote{min-height:100px}section{padding:58px 16px}}
+
+/* GALAXIA ORBITAL */
+.galaxy{
+  width:min(320px,80vw);aspect-ratio:1;position:relative;margin:30px auto;
+  transform-style:preserve-3d;perspective:700px;
+}
+.core{
+  position:absolute;width:58px;height:58px;border-radius:50%;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle at 30% 25%,#fff,#ff9cde 18%,#a53aff 50%,#210047 78%);
+  box-shadow:0 0 25px #e17aff,0 0 75px #b22dff;
+}
+.orbit{
+  position:absolute;top:50%;left:50%;width:100%;height:40%;
+  border:1px solid #d8a2ff85;border-radius:50%;
+  transform:translate(-50%,-50%) rotate(-28deg);
+  animation:orbit 8s linear infinite;
+}
+.orbit:nth-child(2){width:85%;height:85%;transform:translate(-50%,-50%) rotateX(65deg);animation-duration:12s}
+.orbit:nth-child(3){width:115%;height:55%;transform:translate(-50%,-50%) rotate(55deg);animation-duration:10s}
+.orbit:nth-child(4){width:68%;height:105%;transform:translate(-50%,-50%) rotate(35deg);animation-duration:15s}
+.planet{
+  position:absolute;left:50%;top:-6px;width:14px;height:14px;border-radius:50%;
+  background:#ff8ed9;box-shadow:0 0 15px #ff60ce;
+}
+.orbit:nth-child(2) .planet{background:#a8c7ff;box-shadow:0 0 15px #6f8dff}
+.orbit:nth-child(3) .planet{background:#ffe5a0;box-shadow:0 0 15px #ffc85c}
+@keyframes orbit{to{rotate:360deg}}
+
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:25px}
+.photo-box{
+  overflow:hidden;border:1px solid #d7a2ff50;border-radius:18px;
+  background:#120820;min-height:210px;display:flex;flex-direction:column;
+}
+.photo-box img{width:100%;height:230px;object-fit:cover;display:none}
+.photo-placeholder{flex:1;min-height:155px;display:grid;place-items:center;padding:16px;color:#d9b8ff;font-size:17px}
+.photo-box label{padding:14px;background:#ffffff09;font:13px Arial,sans-serif;color:#ffc6ed;cursor:pointer}
+.photo-box input{display:none}
+@media(max-width:430px){.photo-grid{grid-template-columns:1fr}.photo-box img{height:260px}}
+
+button,.music-link{
+  display:inline-block;border:1px solid #ff8cdb88;color:white;
+  background:linear-gradient(110deg,#9c36ff,#e13b9b);
+  border-radius:30px;padding:14px 23px;font-size:15px;cursor:pointer;
+  text-decoration:none;box-shadow:0 0 25px #bc35ff35;
+  transition:transform .2s,filter .2s;margin-top:20px;
+}
+button:hover,.music-link:hover{transform:scale(1.04);filter:brightness(1.15)}
+.music-note{color:#d8c5ed;margin-top:15px;font-size:14px}
+footer{padding:35px 16px 50px;color:#d5b5f2;font-size:15px}
+footer span{color:#ff72c8}
+#surprise{display:none;margin-top:25px;font-size:22px;color:#ffb9e6;line-height:1.7}
+</style>
+</head>
+
+<body>
+<div id="universe">
+  <canvas id="stars"></canvas>
+  <div class="nebula one"></div>
+  <div class="nebula two"></div>
+</div>
+
+<section class="hero">
+  <div class="eyebrow">Un universo hecho para vos</div>
+  <h1>Para <span class="gradient">Martu</span> ❤️</h1>
+  <p class="subtitle">Entre tantos planetas y estrellas<br>mi lugar favorito siempre va a ser con vos</p>
+  <div class="heart-wrap">
+    <div class="heart"><div class="heart-inner">❤️</div></div>
+  </div>
+  <div class="scroll">DESLIZÁ PARA VER TU SORPRESA ↓</div>
+</section>
+
+<section>
+  <div class="eyebrow">Mi universo favorito</div>
+  <h2>Vos y yo en el infinito 🌌</h2>
+  <div class="galaxy">
+    <div class="core"></div>
+    <div class="orbit"><div class="planet"></div></div>
+    <div class="orbit"><div class="planet"></div></div>
+    <div class="orbit"><div class="planet"></div></div>
+    <div class="orbit"><div class="planet"></div></div>
+  </div>
+  <div class="panel">
+    <p class="love-text">
+      De todos los lugares que existen en este universo
+      <strong>yo te elegiría a vos una y mil veces</strong>
+      <br><br>
+      Porque desde que llegaste a mi vida hay cosas que se sienten diferentes
+      y hasta los días más difíciles se hacen un poquito más lindos cuando estoy con vos
+      <br><br>
+      <strong>Te quiero muchísimo Martu ❤️</strong>
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Cosas que quiero que sepas</div>
+  <h2>Un poquito de lo que siento 💗</h2>
+  <div class="quotes">
+    <div class="quote">Si pudiera volver a conocerte, te volvería a elegir a vos</div>
+    <div class="quote">No importa cuánto tiempo pase, siempre quiero más tiempo con vos</div>
+    <div class="quote">Ocho horas con vos se sienten como quince minutos</div>
+    <div class="quote">Tu sonrisa tiene esa forma de mejorarme hasta los días más difíciles</div>
+    <div class="quote">No necesitás ser perfecta para mí, porque te quiero tal y como sos</div>
+    <div class="quote">Mi parte favorita de cualquier día es cuando puedo compartirlo con vos</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Nuestros recuerdos</div>
+  <h2>Un pedacito de nosotros 📸</h2>
+  <div class="panel">
+    <p>Acá podés poner nuestras fotos favoritas para tenerlas siempre en esta galaxia ❤️</p>
+    <div class="photo-grid">
+      <div class="photo-box">
+        <img id="photo1" alt="Nuestro recuerdo número uno">
+        <div class="photo-placeholder" id="placeholder1">✨ Nuestra primera foto</div>
+        <label for="upload1">Elegir foto 1</label>
+        <input type="file" id="upload1" accept="image/*">
+      </div>
+      <div class="photo-box">
+        <img id="photo2" alt="Nuestro recuerdo número dos">
+        <div class="photo-placeholder" id="placeholder2">💗 Un momento juntos</div>
+        <label for="upload2">Elegir foto 2</label>
+        <input type="file" id="upload2" accept="image/*">
+      </div>
+    </div>
+    <p class="music-note">Las fotos se muestran en tu navegador. Para que también aparezcan cuando abras la página en otro dispositivo, vas a tener que agregarlas al proyecto.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Nuestra canción 🎶</div>
+  <h2>Una canción para vos</h2>
+  <div class="panel">
+    <p class="love-text">Porque hay canciones que te hacen pensar en una persona sin importar dónde estés ❤️</p>
+    <p style="font-size:22px;margin-top:20px;color:#ffb4e4">Loco (Tu Forma de Ser)</p>
+    <a class="music-link" href="https://www.youtube.com/results?search_query=Loco+Tu+Forma+de+Ser+Los+Autenticos+Decadentes" target="_blank" rel="noopener noreferrer">▶ Escuchar nuestra canción</a>
+    <p class="music-note">Tocá el botón para abrir YouTube y reproducirla. No se inicia sola.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Y todavía queda algo más...</div>
+  <h2>Una última cosita ❤️</h2>
+  <div class="panel">
+    <p class="love-text">Hay algo que quiero que te acuerdes siempre, incluso en los días en los que no nos podamos ver.</p>
+    <button id="surpriseButton" type="button">Abrí tu sorpresa 💌</button>
+    <div id="surprise">
+      Te elegiría en esta vida<br>
+      en cualquier lugar<br>
+      en cualquier momento<br>
+      y en cualquier universo ✨<br><br>
+      <strong>Te quiero muchísimo Martu ❤️</strong>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Hecho con mucho amor <span>❤️</span><br>
+  Para mi persona favorita: Martu
+</footer>
+
+<script>
+/* ESTRELLAS ANIMADAS */
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+let stars = [];
+let width = 0, height = 0;
+let pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+function resizeCanvas(){
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width * pixelRatio;
+  canvas.height = height * pixelRatio;
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+  ctx.setTransform(pixelRatio,0,0,pixelRatio,0,0);
+
+  const amount = Math.min(240, Math.floor(width * height / 4500));
+  stars = Array.from({length:amount},()=>({
+    x:Math.random()*width,
+    y:Math.random()*height,
+    r:Math.random()*1.6+.2,
+    a:Math.random()*.7+.2,
+    speed:Math.random()*.008+.002,
+    phase:Math.random()*Math.PI*2
+  }));
+}
+window.addEventListener("resize",resizeCanvas);
+resizeCanvas();
+
+let frame = 0;
+function drawStars(){
+  ctx.clearRect(0,0,width,height);
+  frame += 1;
+  for(const s of stars){
+    const alpha = s.a*(.65+.35*Math.sin(frame*s.speed+s.phase));
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle = `rgba(255,235,255,${alpha})`;
+    ctx.fill();
+
+    s.y -= .04;
+    if(s.y < 0){s.y=height;s.x=Math.random()*width}
+  }
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+
+/* PREVISUALIZAR FOTOS */
+function connectPhoto(inputId,imageId,placeholderId){
+  const input = document.getElementById(inputId);
+  const img = document.getElementById(imageId);
+  const placeholder = document.getElementById(placeholderId);
+
+  input.addEventListener("change",()=>{
+    const file = input.files && input.files[0];
+    if(!file) return;
+    if(!file.type.startsWith("image/")) return;
+
+    const reader = new FileReader();
+    reader.onload = ()=>{
+      img.src = reader.result;
+      img.style.display = "block";
+      placeholder.style.display = "none";
+    };
+    reader.readAsDataURL(file);
+  });
+}
+connectPhoto("upload1","photo1","placeholder1");
+connectPhoto("upload2","photo2","placeholder2");
+
+/* SORPRESA */
+document.getElementById("surpriseButton").addEventListener("click",()=>{
+  const surprise = document.getElementById("surprise");
+  const button = document.getElementById("surpriseButton");
+  surprise.style.display = "block";
+  button.textContent = "Te quiero muchísimo ❤️";
+  button.disabled = true;
+});
+</script>
+</body>
+</html>
